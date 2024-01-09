@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 
-const TotalScore = () => {
+const TotalScore = ({ score }) => {
   return (
     <ScoreContainer>
-      <div>
-        <h1>0</h1>
+      
+        <h1>{ score }</h1>
         <p>Total Score</p>
-      </div>
+    
     </ScoreContainer>
   );
 };
@@ -24,6 +24,6 @@ max-width: 200px;
     font-size: 24px;
     font-weight: 500px;
   }
-`
+`;
 
 export default TotalScore;

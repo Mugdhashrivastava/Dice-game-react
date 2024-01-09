@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+
+import { Button, OutlineButton } from "../Styled/Button";
+
 const StartGame = ({toggle}) => {
   return (
     <Container>
@@ -20,7 +23,7 @@ const Container = styled.div`
   max-width: 1180px;
   height: 100vh;
   display: flex;
-  margin: 10 auto;
+  margin: 0 auto;
   align-items: center;
 
   .content {
@@ -31,25 +34,3 @@ const Container = styled.div`
   }
 `;
 
-const Button = styled.button`
-  display: flex;
-  min-width: 220px;
-  padding: 10px 18px;
-  color:white;
-  font-size: 16px;
-  border:1px solid transparent;
-
-  border-radius: 5px;
-  background: #000;
-  border: none;
-  cursor: pointer;
-
-
-  &:hover {
-    background-color: white;
-    border:1px solid black;
-    color:black;
-    transition: 0.4s background ease-in;
-
-  }
-`;
