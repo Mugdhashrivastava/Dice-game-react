@@ -1,19 +1,13 @@
 import styled from "styled-components";
-import { useState } from "react";
 
-const RollDice = ({rollDice,currentDice}) => {
-
-  
-
-
-
-  
-  
-  
-    return (
+const RollDice = ({ rollDice, currentDice }) => {
+  return (
     <DiceContainer>
       <div className="dice" onClick={rollDice}>
-      <img src={`src/assets/images/dice/dice${currentDice}.png`} alt="dice 1" />
+        <img
+          src={`src/assets/images/dice/dice${currentDice}.png`}
+          alt="dice 1"
+        />
       </div>
       <p>Click on Dice to roll</p>
     </DiceContainer>

@@ -5,6 +5,8 @@ import RollDice from "./RollDice";
 import { useState } from "react";
 import { Button, OutlineButton } from "../Styled/Button";
 import Rules from "./Rules";
+import { useSound } from "use-sound";
+import diceRollSound from "../sound/diceRollSound.mp3";
 
 const GamePlay = () => {
   const [score, setScore] = useState(0);
@@ -12,6 +14,7 @@ const GamePlay = () => {
   const [currentDice, setCurrentDice] = useState(1);
   const [error, setError] = useState("");
   const [showRules, setShowRules] = useState(false);
+  const [playDiceRollSound] = useSound(diceRollSound);
 
   const generateRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
@@ -23,13 +26,14 @@ const GamePlay = () => {
       return;
     }
 
+    playDiceRollSound();
     const randomNumber = generateRandomNumber(1, 7);
     setCurrentDice((prev) => randomNumber);
 
     if (selectedNumber === randomNumber) {
-      setScore((prev) => prev + randomNumber+selectedNumber);
+      setScore((prev) => prev + randomNumber + selectedNumber);
     } else {
-      setScore((prev) => prev +selectedNumber);
+      setScore((prev) => prev + selectedNumber);
     }
 
     setSelectedNumber(undefined);
