@@ -9,9 +9,9 @@ const Rules = () => {
         <p>Click on dice image</p>
         <p>
           after click on dice if selected number is equal to dice number you
-          will get same point as dice{" "}
+          will get sum of dice and selected number{" "}
         </p>
-        <p>if you get wrong guess then only selected numbe will be added </p>
+        <p>if you get wrong guess then only selected number will be added </p>
       </div>
     </RulesContainer>
   );
